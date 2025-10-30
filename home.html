@@ -13,6 +13,12 @@
       content="Explore the beauty, culture, and highlights of Doha, Qatar."
     />
 
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Bootstrap CSS v5.2.1 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -21,14 +27,21 @@
       crossorigin="anonymous"
     />
 
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
-    <header class="fixed-top">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+    <header class="fixed-top shadow-sm">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand fw-bold" href="#home"> Doha Qatar </a>
+          <a
+            class="navbar-brand fw-bold"
+            style="color: var(--dark); font-family: 'Playfair Display', serif"
+            href="index.html"
+          >
+            Doha Qatar
+          </a>
 
           <!-- Regular navbar collapse for large screens -->
           <div
@@ -37,8 +50,18 @@
           >
             <ul class="navbar-nav gap-3">
               <li class="nav-item">
-                <a class="nav-link" href="#highlights">
-                  <span style="color: var(--white)">Highlights</span>
+                <a class="nav-link" href="home.html#highlights">
+                  <span style="color: var(--dark)">Highlights</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="home.html#architecture">
+                  <span style="color: var(--dark)">Architecture</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="home.html#landmarks">
+                  <span style="color: var(--dark)">Landmarks</span>
                 </a>
               </li>
             </ul>
@@ -46,17 +69,14 @@
 
           <!-- Hamburger toggler for mobile -->
           <button
-            class="navbar-toggler d-lg-none"
+            class="navbar-toggler dark-toggler d-lg-none"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar"
             aria-label="Toggle navigation"
           >
-            <span
-              class="navbar-toggler-icon"
-              style="color: var(--white)"
-            ></span>
+            <span class="navbar-toggler-icon"></span>
           </button>
 
           <!-- Offcanvas for mobile -->
@@ -74,7 +94,7 @@
               </h5>
               <button
                 type="button"
-                class="btn-close btn-close-dark"
+                class="btn-close btn-close-light"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               ></button>
@@ -83,8 +103,18 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav gap-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="#highlights">
+                  <a class="nav-link" href="home.html#highlights">
                     <span style="color: var(--dark)"> Highlights</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="home.html#architecture">
+                    <span style="color: var(--dark)"> Architecture</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="home.html#landmarks">
+                    <span style="color: var(--dark)"> Landmarks</span>
                   </a>
                 </li>
               </ul>
@@ -93,7 +123,266 @@
         </div>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section id="header">
+        <img
+          src="assets/img/doha.jpg"
+          alt="Doha-Header"
+          class="img-fluid w-100"
+        />
+
+        <div class="header-overlay">
+          <div class="overlay-content">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <h2>One of the New 7 Wonders Cities</h2>
+                  <h1 class="city-title">Doha, Qatar</h1>
+                  <p class="arabic-text">الدوحة، قطر</p>
+                  <hr class="divider" />
+                  <p class="subtext" style="font-family: cairo">
+                    <i>
+                      Where the desert sands meet the ocean and where ancient
+                      traditions, and modern wonders live side by side.
+                    </i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="highlights" class="py-5">
+        <div class="container-fluid px-5">
+          <div class="row g-4 mb-5">
+            <div
+              class="col-12 col-lg-3 d-flex align-items-center justify-content-center"
+            >
+              <div class="text-center">
+                <h2
+                  class="display-4 mb-4"
+                  style="
+                    color: var(--dark);
+                    font-family: 'Playfair Display', serif;
+                  "
+                >
+                  DISCOVER<br />DOHA, QATAR
+                </h2>
+                <div class="d-flex justify-content-around gap-4">
+                  <div>
+                    <h3 class="fw-bold" style="color: var(--accent-color)">
+                      300+
+                    </h3>
+                    <p class="text-muted small">Skyscrapers</p>
+                  </div>
+                  <div>
+                    <h3 class="fw-bold" style="color: var(--accent-color)">
+                      100+
+                    </h3>
+                    <p class="text-muted small">Cultural Landmarks</p>
+                  </div>
+                  <div>
+                    <h3 class="fw-bold" style="color: var(--accent-color)">
+                      50+
+                    </h3>
+                    <p class="text-muted small">Museums & Galleries</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-9">
+              <div class="row g-3">
+                <div class="col-6 col-md-4">
+                  <img
+                    src="assets/img/doha.jpg"
+                    alt="Doha 1"
+                    class="img-fluid w-100 h-100 object-fit-cover rounded shadow"
+                    style="min-height: 250px; max-height: 350px"
+                  />
+                </div>
+                <div class="col-6 col-md-4">
+                  <img
+                    src="assets/img/doha.jpg"
+                    alt="Doha 2"
+                    class="img-fluid w-100 h-100 object-fit-cover rounded shadow"
+                    style="min-height: 250px; max-height: 350px"
+                  />
+                </div>
+                <div class="col-12 col-md-4">
+                  <img
+                    src="assets/img/doha.jpg"
+                    alt="Doha 3"
+                    class="img-fluid w-100 h-100 object-fit-cover rounded shadow"
+                    style="min-height: 250px; max-height: 350px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4 mb-5 align-items-center">
+            <div class="col-12 col-lg-6">
+              <div class="ratio ratio-16x9 rounded overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/k8JNGVa0_gY"
+                  title="Doha Qatar Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  class="rounded"
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="ps-lg-4">
+                <h2
+                  class="display-5 mb-4"
+                  style="
+                    color: var(--dark);
+                    font-family: 'Playfair Display', serif;
+                  "
+                >
+                  DISCOVER<br />DOHA
+                </h2>
+                <p class="text-muted mb-3" style="line-height: 1.8">
+                  Doha is the capital and most populous city of Qatar. It has a
+                  population of 956,460 (2015). The city is located on the coast
+                  of the Persian Gulf in the east of the country, north of Al
+                  Wakrah and south of Al Khor.
+                </p>
+                <p class="text-muted mb-4" style="line-height: 1.8">
+                  It is Qatar's fastest growing city, with over 80% of the
+                  nation's population living in Doha or its surrounding suburbs,
+                  and it is also the economic centre of the country.
+                </p>
+                <p class="text-muted" style="line-height: 1.8">
+                  Doha was founded in the 1820s as an offshoot of Al Bidda. It
+                  was officially declared as the country's capital in 1971, when
+                  Qatar gained independence from being a British protectorate.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="architecture"></section>
+
+      <section id="landmarks" class="py-5">
+        <div class="container-fluid px-5">
+          <div class="row mb-5">
+            <div class="col-12 text-center mb-4">
+              <h2
+                class="display-5"
+                style="
+                  color: var(--dark);
+                  font-family: 'Playfair Display', serif;
+                "
+              >
+                POPULAR LANDMARKS
+              </h2>
+            </div>
+          </div>
+
+          <div class="row g-4 mb-4">
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="card h-100 border-0 shadow-sm">
+                <img
+                  src="assets/img/doha.jpg"
+                  alt="Tour 1"
+                  class="card-img-top"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5
+                    class="card-title"
+                    style="font-family: 'Playfair Display', serif"
+                  >
+                    SOUQ WAQIF TOUR
+                  </h5>
+                  <p class="card-text text-muted small">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam, quos. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="card h-100 border-0 shadow-sm">
+                <img
+                  src="assets/img/doha.jpg"
+                  alt="Tour 2"
+                  class="card-img-top"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5
+                    class="card-title"
+                    style="font-family: 'Playfair Display', serif"
+                  >
+                    ISLE OF SKYE TOUR
+                  </h5>
+                  <p class="card-text text-muted small">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam, quos. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="card h-100 border-0 shadow-sm">
+                <img
+                  src="assets/img/doha.jpg"
+                  alt="Tour 3"
+                  class="card-img-top"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5
+                    class="card-title"
+                    style="font-family: 'Playfair Display', serif"
+                  >
+                    HIGHLANDS TOUR
+                  </h5>
+                  <p class="card-text text-muted small">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam, quos. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="card h-100 border-0 shadow-sm">
+                <img
+                  src="assets/img/doha.jpg"
+                  alt="Tour 4"
+                  class="card-img-top"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5
+                    class="card-title"
+                    style="font-family: 'Playfair Display', serif"
+                  >
+                    ISLE SKYE TOUR
+                  </h5>
+                  <p class="card-text text-muted small">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam, quos. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer>
       <div
         class="text-center"
