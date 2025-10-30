@@ -4,13 +4,14 @@
   --white: #ffffff;
   --dark: #050505;
   --secondary-dark: #1a1a1a;
-  --transplarent-dark: rgba(0, 0, 0, 0.5);
+  --transparent-dark: rgba(0, 0, 0, 0.5);
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 60px;
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
@@ -18,6 +19,11 @@ body {
   font-family: "Roboto Flex", sans-serif;
   overflow-x: hidden;
   max-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -37,27 +43,70 @@ header {
   z-index: 1000;
 }
 
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#highlights {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .navbar {
   background-color: transparent !important;
   transition: background-color 0.3s ease;
 }
 
+.navbar.scrolled {
+  background-color: var(--transparent-dark) !important;
+}
+
 .video-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  z-index: 1;
   text-align: center;
   color: var(--white);
-  background: var(--transplarent-darks);
-  padding: 1rem 2rem;
+  padding: 2rem 3rem;
   border-radius: 0.5rem;
-  min-width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.video-overlay h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.8rem, 8vw + 1rem, 5.5rem);
+  font-weight: 700;
+}
+
+.video-overlay p {
+  margin-bottom: 1.5rem;
+  font-size: clamp(1rem, 2.5vw + 0.5rem, 2rem);
+  font-weight: 400;
 }
 
 footer {
   position: relative;
   z-index: 2;
+  margin-top: auto;
 }
 
 .navbar .nav-link,
@@ -73,18 +122,63 @@ footer {
   color: var(--dark);
 }
 
+.btn-outline-light {
+  color: var(--white);
+  border-color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus,
+.btn-outline-light:active {
+  color: var(--dark) !important;
+  background-color: var(--white) !important;
+  border-color: var(--white) !important;
+}
+
 @media (max-width: 768px) {
+  #highlights {
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
+  }
+
+  #bg-video {
+    object-fit: cover;
+  }
+
   .video-overlay {
-    top: 55%; /* slightly lower to avoid navbar overlap */
-    padding: 0.8rem 1rem;
+    padding: 1.5rem 2rem;
+    max-width: 85%;
+  }
+
+  .video-overlay .btn {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .video-overlay {
+    padding: 1.25rem 1.5rem;
     max-width: 90%;
   }
 
-  .video-overlay h1 {
-    font-size: 1.5rem; /* smaller heading */
+  .video-overlay .btn {
+    font-size: 1rem;
+    padding: 0.55rem 1.5rem;
   }
+}
 
-  .video-overlay p {
-    font-size: 0.95rem;
+@media (min-width: 769px) and (max-width: 1024px) {
+  .video-overlay {
+    padding: 2rem 2.5rem;
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .video-overlay {
+    padding: 2.5rem 3.5rem;
+    max-width: 70%;
   }
 }
