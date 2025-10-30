@@ -1,0 +1,90 @@
+/* Color variables */
+:root {
+  --light-gray: #f7f7f7;
+  --white: #ffffff;
+  --dark: #050505;
+  --secondary-dark: #1a1a1a;
+  --transplarent-dark: rgba(0, 0, 0, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--white);
+  font-family: "Roboto Flex", sans-serif;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--dark);
+}
+
+header {
+  z-index: 1000;
+}
+
+.navbar {
+  background-color: transparent !important;
+  transition: background-color 0.3s ease;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--white);
+  background: var(--transplarent-darks);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  min-width: 100%;
+}
+
+footer {
+  position: relative;
+  z-index: 2;
+}
+
+.navbar .nav-link,
+.navbar-brand {
+  color: var(--white); /* ensure text is white */
+}
+.navbar-toggler {
+  filter: brightness(100%); /* brightens the hamburger icon */
+}
+
+.offcanvas {
+  background-color: var(--light-gray);
+  color: var(--dark);
+}
+
+@media (max-width: 768px) {
+  .video-overlay {
+    top: 55%; /* slightly lower to avoid navbar overlap */
+    padding: 0.8rem 1rem;
+    max-width: 90%;
+  }
+
+  .video-overlay h1 {
+    font-size: 1.5rem; /* smaller heading */
+  }
+
+  .video-overlay p {
+    font-size: 0.95rem;
+  }
+}

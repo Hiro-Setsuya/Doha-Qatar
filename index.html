@@ -8,6 +8,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <meta
+      name="description"
+      content="Explore the beauty, culture, and highlights of Doha, Qatar."
+    />
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link
@@ -17,16 +21,114 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
-    <header>
-      <!-- place navbar here -->
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold" href="#home"> Doha Qatar </a>
+
+          <!-- Regular navbar collapse for large screens -->
+          <div
+            class="collapse navbar-collapse d-lg-flex justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav gap-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#highlights">
+                  <span style="color: var(--white)">Highlights</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Hamburger toggler for mobile -->
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span
+              class="navbar-toggler-icon"
+              style="color: var(--white)"
+            ></span>
+          </button>
+
+          <!-- Offcanvas for mobile -->
+          <div
+            class="offcanvas offcanvas-end d-lg-none"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+            data-bs-scroll="true"
+            style="--bs-offcanvas-width: 280px"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Doha Qatar
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-dark"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="navbar-nav gap-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="#highlights">
+                    <span style="color: var(--dark)"> Highlights</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main></main>
+    <main>
+      <section id="home" class="position-relative">
+        <div class="container-fluid p-0 position-relative">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            id="bg-video"
+            style="width: 100%; height: auto; display: block"
+          >
+            <source src="assets/vid/doha.mp4" type="video/mp4" />
+            Your browser does not support the video.
+          </video>
+
+          <div class="video-overlay">
+            <h1 class="fw-bold display-5 display-md-4 display-lg-3">
+              Welcome to Doha
+            </h1>
+            <p class="lead fs-6 fs-md-5 fs-lg-4">
+              Discover Qatar’s modern marvels and timeless culture
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer>
-      <!-- place footer here -->
+      <div
+        class="text-center py-2"
+        style="background-color: var(--dark); color: var(--white)"
+      >
+        <p class="mb-0">
+          <img src="assets/img/AV_icon.png" alt="AV_icon" width="48px" />&copy;
+          2025 Adrian Vincent Javillo. All rights reserved.
+        </p>
+      </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script
