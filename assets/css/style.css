@@ -60,13 +60,22 @@ main {
   flex-direction: column;
 }
 
-#highlights {
+/* Index page highlights section with video */
+#highlights.position-relative {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
+}
+
+/* Home page highlights section */
+#highlights.py-5 {
+  min-height: auto;
+  display: block;
+  background-color: var(--background);
+  padding: 80px 0 60px;
 }
 
 #bg-video {
@@ -209,35 +218,30 @@ footer {
   border: 2px solid white;
 }
 
-/* Highlights Section Styling */
-#highlights {
-  background-color: var(--background);
-  padding: 80px 0 60px;
-}
-
-#highlights .card {
+/* Highlights Section Styling for home.html */
+#highlights.py-5 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
 
-#highlights .card:hover {
+#highlights.py-5 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
 }
 
-#highlights .card-img-top {
+#highlights.py-5 .card-img-top {
   transition: transform 0.3s ease;
 }
 
-#highlights .card:hover .card-img-top {
+#highlights.py-5 .card:hover .card-img-top {
   transform: scale(1.1);
 }
 
-#highlights img {
+#highlights.py-5 img {
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-#highlights img:hover {
+#highlights.py-5 img:hover {
   transform: scale(1.05);
   filter: brightness(0.9);
 }
@@ -247,9 +251,13 @@ footer {
 }
 
 @media (max-width: 768px) {
-  #highlights {
+  #highlights.position-relative {
     min-height: 100vh;
     min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
+  }
+
+  #highlights.py-5 {
+    min-height: auto;
   }
 
   #bg-video {
