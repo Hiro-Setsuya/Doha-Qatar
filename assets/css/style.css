@@ -391,7 +391,7 @@ footer {
 @media (max-width: 768px) {
   #highlights.position-relative {
     min-height: 100vh;
-    min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
+    min-height: 100dvh;
   }
 
   #highlights.py-5 {
