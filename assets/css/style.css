@@ -134,13 +134,152 @@ footer {
   color: var(--white);
 }
 
+.navbar .nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+  padding-bottom: 0.5rem;
+}
+
+.navbar .nav-link span {
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link:focus::after {
+  width: 80%;
+}
+
+.navbar .nav-link:hover span,
+.navbar .nav-link:focus span {
+  color: var(--accent-color) !important;
+}
+
+.offcanvas .nav-link {
+  position: relative;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+.offcanvas .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 0;
+  background-color: var(--accent-color);
+  border-radius: 0 4px 4px 0;
+  transition: height 0.3s ease;
+}
+
+.offcanvas .nav-link:hover,
+.offcanvas .nav-link:focus {
+  background-color: rgba(182, 141, 64, 0.1);
+  padding-left: 1.25rem;
+}
+
+.offcanvas .nav-link:hover::before,
+.offcanvas .nav-link:focus::before {
+  height: 100%;
+}
+
+.offcanvas .nav-link:hover span,
+.offcanvas .nav-link:focus span {
+  color: var(--accent-color) !important;
+  font-weight: 500;
+}
+
+.navbar-brand:hover {
+  color: var(--accent-color) !important;
+}
+
 .navbar-toggler.dark-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(28, 28, 28, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler.dark-toggler {
+  border: 2px solid var(--dark);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler.dark-toggler:hover,
+.navbar-toggler.dark-toggler:focus {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: scale(1.05);
 }
 
 .offcanvas {
   background-color: var(--light-gray);
   color: var(--dark);
+}
+
+.offcanvas-header {
+  border-bottom: 2px solid var(--accent-color);
+  padding: 1.5rem;
+}
+
+.offcanvas-title {
+  font-family: "Playfair Display", serif;
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.offcanvas .btn-close {
+  transition: all 0.3s ease;
+}
+
+.offcanvas .btn-close:hover {
+  opacity: 1;
+}
+
+.offcanvas-body {
+  padding: 1.5rem;
+}
+
+.offcanvas .navbar-nav .nav-item {
+  animation: slideInRight 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+.offcanvas .navbar-nav .nav-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.offcanvas .navbar-nav .nav-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.offcanvas .navbar-nav .nav-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .btn-outline-light {
@@ -160,7 +299,7 @@ footer {
 /* Header section */
 #header {
   position: relative;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -183,7 +322,7 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 80px; /* Prevent overlap with fixed navbar */
+  padding-top: 80px;
   padding-bottom: 40px;
   box-sizing: border-box;
 }
