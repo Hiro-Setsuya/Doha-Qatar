@@ -1,6 +1,6 @@
-# Doha, Qatar — Website
+# Doha, Qatar — Static Website
 
-# Doha, Qatar — Tourism Website (Activity 5 — Web Development)
+# Doha, Qatar — Static Website (Activity 5 — Web Development)
 
 This repository contains Activity 5 for a Web Development course/exercise. It is a responsive tourism website showcasing the beauty, culture, and highlights of Doha, Qatar, demonstrating HTML, CSS, and JavaScript fundamentals with modern web design principles.
 
